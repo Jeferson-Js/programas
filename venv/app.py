@@ -2,15 +2,16 @@ import PySimpleGUI as sg
 
 class TelaPython:
     def __init__(self):
+        #sg.change_look_and_feel('DarkBrown4')
         #Tela
-        sg.theme('DarkAmber')
+        sg.theme('Python')
         layout = [
-            [sg.Text('Nome', size=(5,0)), sg.Input(size=(15,0), key='nome')],
-            [sg.Text('Idade', size=(5,0)), sg.Input(size=(15,0), key='idade')],
+            [sg.Text('Nome', size=(5,0)), sg.Input(size=(19,0), key='nome')],
+            [sg.Text('Idade', size=(5,0)), sg.Input(size=(19,0), key='idade')],
             [sg.Text('Quais provedores de emails são aceitos?')],
             [sg.Checkbox('Gmail', key='gamil'), sg.Checkbox('Outlook', key='outlook'), sg.Checkbox('Yahool', key='yahool')],
-            [sg.Button('Enviar dados')],
-            [sg.Output(size=(35, 10))]
+            [sg.Button('Enviar dados', size=(15,0))],
+            [sg.Output(size=(35, 5))]
         ]
 
         self.window = sg.Window('Informações do usuário').layout(layout)
